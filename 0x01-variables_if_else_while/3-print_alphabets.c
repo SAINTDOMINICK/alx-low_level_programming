@@ -1,4 +1,4 @@
-#include <stdio.o>
+#include <stdio.h>
 
 /**
  * main - prints alpha to lower and uppercase
@@ -10,9 +10,8 @@ int main(void)
 
 	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
-
 	for (ch = 'A'; ch <= 'Z'; ch++)
-		putchar(ch);
+		putchat(ch);
 	putchar('\n');
 	return (0);
 }
