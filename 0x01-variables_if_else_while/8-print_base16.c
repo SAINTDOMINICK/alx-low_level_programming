@@ -4,6 +4,7 @@
  * main - prints number in base 16
  * Return: Always 0
  */
+int main(void)
 {
 	int num;
 	char la;
@@ -16,3 +17,4 @@
 
 	putchar('\n');
 	return (0);
+}
