@@ -19,13 +19,13 @@ char **strtow(char *str)
 	return (NULL);
 
 	i = flag = len = 0;
-		while (str[i])
+		if (str[i])
 	{
 	if (flag == 0 && str[i] != ' ')
 	flag = 1;
 	if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 
-	     flag = 0;
+		flag = 0;
 		len++;
 	}
 	i++;
@@ -61,8 +61,7 @@ void util(char **words, char *str)
 			start = i;
 			flag = 1;
 			}
-
- 		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
+		if (i > 0 && str[i] == ' ' && str[i - 1] != ' ')
 		{
 		create_word(words, str, start, i, j);
 		j++;
@@ -72,7 +71,7 @@ void util(char **words, char *str)
 	}
 
 		if (flag == 1)
-     			create_word(words, str, start, i, j);
+			create_word(words, str, start, i, j);
 }
 
 /**
@@ -90,7 +89,7 @@ void create_word(char **words, char *str, int start, int end, int index)
 		i = end - start;
 		words[index] = (char *)malloc(sizeof(char) * (i + 1));
 
-	 for (j = 0; start < end; start++, j++)
+		for (j = 0; start < end; start++, j++)
 		words[index][j] = str[start];
 			words[index][j] = '\0';
 }
